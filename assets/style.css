@@ -1,0 +1,684 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      
+}
+
+body{
+      font-family: cursive;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      height: 100%;    
+}
+  
+  a{
+      text-decoration: none;
+  }
+  
+  ul{
+      list-style: none;
+  
+  }
+  
+  img{
+      max-width: 100%;
+  }
+  
+  .title{
+      width: 100%;
+      background:white;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .title h1{
+      color: #fff;
+      font-size: 34px;
+      font-weight: 200;
+      text-align: center;
+  }
+  
+  .content {
+      flex: 1 0 auto;
+      background-color:white;
+  }
+  .navegacion{
+      width: 100%;
+      min-height: 100%;
+      background:#1c1c1c ;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 80px;
+  }
+  
+  .menu{
+      width: 1000px;
+      display: flex;
+      flex-wrap: wrap;
+      
+      height: 90px;
+      
+  }
+  
+  .menu li{
+      flex-basis: 0;
+      flex-grow: 1;
+      border-right: 1px solid #363636;
+      position: relative;
+  }
+  
+  .menu .first-item{
+      border-left: 1px solid #363636;;
+  }
+  .menu li a{
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+  
+  }
+  
+  .menu .imagen{
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+      width: 0%;
+      z-index: 20;
+      -webkit-transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+     -moz-transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+       -o-transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+          transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+  
+  -webkit-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+     -moz-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+       -o-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+          transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+          box-shadow:0px 0px 11px 0px #000000;
+          -moz-box-shadow:0px 0px 11px 0px #000000;
+          -webkit-box-shadow:0px 0px 11px 0px #000000;
+  
+  }
+  
+  .menu li a .text-item{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      top: 0%;
+      position: absolute;
+      z-index: 10;
+  
+      -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
+  -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+     -moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+       -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+          transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+  
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+     -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+       -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+  
+}
+  
+.menu li a .down-item{
+      width: 100%;
+      height: 100%;
+      background:#1c1c1c ;
+      position: absolute;
+      top: 0%; 
+      -webkit-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+     -moz-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+       -o-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+          transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+  
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+     -moz-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+       -o-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+          transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+  
+  
+}
+  
+.menu li:hover .down-item, .menu li:hover .text-item{
+      top: 100%;
+      height: 115%;
+}
+.menu li:hover .imagen{
+      width: 100%;
+      right: 0px;
+}
+  /* comienza el footer */
+
+.footer {
+	display: flex;
+	padding: 5px 0;
+	background-color: black;
+	
+}
+.columna1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+}
+.columna1 p {
+	color: white;
+}
+.columna1 a {
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	font-weight: 200;
+}
+
+.fotoinicio{
+      height: 400px;
+      margin-top: -79px;
+}
+/* historia */
+  section{
+      display: flex;
+      flex-direction: column;
+    height: 1100px;
+    margin-top: -79px;
+    background-color:white;
+    width: 100%;
+}
+  .historiah1{
+    display: flex;
+    justify-content: center;
+    color: rgb(72, 48, 204);
+    background-color: black;
+}
+  .historiap{
+      margin: 30px 20px;
+  }
+  section .imghistoria{    
+      height: 197px;
+width: 675px;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+} 
+.fraseconcierto{
+    display: flex;
+    text-align: center;
+    background-color:white;
+    height: 720px
+}
+.fotos1{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    
+}
+.sectionfotos{
+    width: 67%;
+    margin: 52px
+}
+.sectionfotos2{
+    margin: 52px;
+}
+.fotoviña{
+    width: 100%;
+    height: 50%;
+    border-radius: 33px;
+}
+.fotocolombia{
+    width: 100%;
+    height: 50%;
+    border-radius: 33px;
+}
+.inicios{
+    display: flex;
+justify-content: center;
+color: white;
+}
+.historia{
+    display: flex;
+justify-content: center;
+color: white;
+}
+/* imagenes */
+.imagenesmarc{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+    padding: 50px;
+    background-color: black;
+
+    
+} 
+.imagen1{
+    display: flex;
+    height: 300px;
+    width: 50%;
+}
+.imagen2{
+    display: flex;
+    height: 300px;
+    width: 50%;
+}
+.imagen3{
+    display: flex;
+    
+    height: 300px;
+    width: 50%;
+}
+.imagen4{
+    display: flex;
+    height: 300px;
+    width: 50%;
+}
+.imagen5{
+    display: flex;
+    height: 300px;
+    width: 50%;
+
+}
+.imagen6{
+    display: flex;
+    height: 300px;
+    width: 50%;
+}
+.imagen7{
+    display: flex;
+    height: 300px;
+    width: 50%;
+}
+.imagen9{
+    display: flex;
+    height: 300px;
+    width: 50%;
+}
+/* hover */
+.imagen9:hover{
+    cursor: pointer;
+    transform: scale(1.3);    
+}
+.imagen8:hover{
+    cursor: pointer;
+    transform: scale(1.3);     
+}
+.imagen7:hover{
+    cursor: pointer;
+    transform: scale(1.3);  
+}
+.imagen6:hover{
+    cursor: pointer;
+    transform: scale(1.3);   
+}
+.imagen5:hover{
+    cursor: pointer;
+    transform: scale(1.3); 
+}
+.imagen4:hover{
+    cursor: pointer;
+    transform: scale(1.3);      
+}
+.imagen3:hover{
+    cursor: pointer;
+    transform: scale(1.3);    
+}
+.imagen2:hover{
+    cursor: pointer;
+    transform: scale(1.3);  
+}
+.imagen1:hover{
+    cursor: pointer;
+    transform: scale(1.3);  
+}
+.col{
+    color: white;
+}
+/* contacto */
+.redes{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+
+margin: 20 0px;
+background-color:black;
+}
+.imgfacebook{
+    width: 100%;
+    height: 20%;
+    padding: 20px;
+    border-radius: 421px;  
+}
+.facebookp{
+    display: flex;
+    justify-content: center;
+    margin: 70px;
+    color: rgb(12, 34, 235);
+    border-left: 1px solid #363636;
+}
+.imginstagram{
+    width: 100%;
+    height: 20%;
+    padding: 20px;
+    border-radius: 421px;
+}
+.instagramp{
+    display: flex;
+    justify-content: center;
+    margin: 70px;
+    color: rgb(223, 65, 104);
+    border-left: 1px solid #363636;
+}
+.imggmail{
+    width: 100%;
+    height: 20%;
+    padding: 20px;
+    border-radius: 421px;
+}
+.gmailp{
+    display: flex;
+    justify-content: center;
+    margin: 70px;
+    color: rgb(252, 8, 28);
+    border-left: 1px solid #363636;
+}
+.imggmail:hover{
+    cursor: pointer;
+    transform: scale(1.3);
+}
+.imginstagram:hover{
+    cursor: pointer;
+    transform: scale(1.3);
+}
+.imgfacebook:hover{
+    cursor: pointer;
+    transform: scale(1.3);
+}
+/* acá empieza el main */
+.main {
+	max-width: 1100px;
+	margin: auto;
+	padding-top: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.section {
+	width: 78%;
+}
+.title {
+	width: 50%;
+	margin: auto;
+}
+
+.contenedor {
+	display: flex;
+	margin-bottom: 100px;
+	justify-content: space-between;
+	align-items: center;
+}
+.contenedor > p,
+.contenedor div {
+	width: 48%;
+}
+.contenedor img {
+    width: 50%;
+    height: 100%;
+}
+.sub {
+	text-align: right;
+	margin-bottom: 20px;
+	padding-right: 40px;
+}
+.txt2 {
+    text-align: right;
+    height: 247px;
+}
+/* aqui empieza el aside */
+.aside {
+	width: 20%;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: rgba(7, 252, 27, 0.692);
+	position: sticky;
+	top: 50px;
+	height: 700px;
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.publicidad {
+	margin-bottom: 30px;
+}
+.picPublicidad {
+	width: 80%;
+	display: block;
+	margin: auto;
+}
+.videos{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* media query de ipad  */
+@media screen and (max-width: 768px) {
+    .fotoinicio{
+        height: 772px;
+
+    }
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+    }
+    div.contenedor > img{
+        width: 100%;
+height: 267px;
+    }
+
+    div.contenedor > p{
+        display: contents;
+        font-size: 12px;
+        color: white;
+    }
+    div.contenedor:nth-child(2) {
+        display: flex;
+        flex-direction: row;
+}
+
+div.contenedor:nth-child(2) > img:nth-child(2) {
+    width: 387px;
+     height: 333px;
+}
+.txt2 {
+    height: 247px;
+    font-size: 12px;
+    color: white;
+}
+.aside{
+    display: none;
+}
+.section {
+    width: 100%;
+    background-color: black;
+}
+.videos {
+    display: flex;
+    flex-direction: column;
+    }
+    .video1 > iframe:nth-child(1) {
+        width: 100%;
+        }
+.fraseconcierto {
+height: 708px;
+background-color: black;
+color: white;
+} 
+.conciertoenviña {
+background-color: blanchedalmond;
+} 
+.sectionfotos {
+    height: 50%;
+    } 
+.inicios {
+text-align: center;
+}   
+.historia {
+    height: 68px;
+    }
+    .fotocolombia {
+        height: 238px;
+        width: 564px;
+        }  
+        .imagenesmarc {
+            height: 772px;
+            display: flex;
+flex-direction: column;
+height: 1789px;
+            }   
+            .imagen1 {
+                width: 100%;
+                }
+                .imagen2 {
+                    width: 100%;
+                    } 
+                    .imagen3 {
+                        width: 100%;
+                        } 
+                        .imagen4 {
+                            width: 0%;
+                            } 
+                            .imagen5 {
+                                width: 100%;
+                                } 
+                                .imagen6 {
+                                    width: 100%;
+                                    }
+                                    .imagen7 {
+                                        width: 100%;
+                                        } 
+                                        .imagen8 {
+                                            width: 100%;
+                                            }  
+                                            .imagen9 {
+                                                width: 0%;
+                                                } 
+                                                .sub {
+                                                    color: white;
+                                                    }
+                                                    .content {
+                                                        background-color: #1D1D1D;
+                                                        }                                                  
+                                                        
+}
+
+
+/* aqui empieza media query de 500px */
+
+@media screen and (max-width: 500px) {
+div.columna1:nth-child(1) > a:nth-child(2) {
+font-size: 11px;
+}
+div.columna1:nth-child(2) > a:nth-child(2) {
+font-size: 11px;
+}
+div.columna1:nth-child(3) > p:nth-child(2) {
+font-size: 11px;
+}  
+.first-item > a:nth-child(1) > span:nth-child(2) {
+font-size: 11px;
+}
+.menu > li:nth-child(2) > a:nth-child(1) > span:nth-child(2) {
+font-size: 11px;
+}
+.menu > li:nth-child(3) > a:nth-child(1) > span:nth-child(2) {
+font-size: 11px;
+}  
+.menu > li:nth-child(4) > a:nth-child(1) > span:nth-child(2) {
+font-size: 11px;
+}   
+.menu > li:nth-child(5) > a:nth-child(1) > span:nth-child(2) {
+font-size: 11px;
+}  
+.menu > li:nth-child(6) > a:nth-child(1) > span:nth-child(2) {
+font-size: 11px;
+} 
+.section {
+    height: 1179px;
+    } 
+    .videos {
+        height: 810px;
+        }
+        .fraseconcierto {
+            height: 417px;
+            }     
+            .fotos1 {
+                height: 501px;
+                }
+                .inicios {
+                    font-size: 16px;
+                        height: 25px;
+                        }
+                    
+                    .historia {
+                        font-size: 16px;
+                        width: 145px;
+                        text-align: center;
+                        height: 25px;
+width: 100%;
+}
+.sectionfotos2 {
+    margin: 0;
+width: 67%;
+    }
+    .fotoviña {
+        height: 239px;
+        width: 671px;
+        }  
+        .sectionfotos {
+            margin: 0;
+            } 
+            .fotocolombia {
+                width: 244px;
+                }  
+                .facebook {
+                    height: 251px;
+                    } 
+                    .instagram {
+                        height: 251px;
+                        } 
+                        .gmail {
+                            height: 251px;
+                            }
+                            .imgfacebook {
+                                height: 146px;
+                                }
+                                .imginstagram {
+                                    height: 146px;
+                                    }
+                                    .imggmail {
+                                        height: 146px;
+                                        }
+                                        .redes {
+                                            height: 501px;
+                                            }
+                                            .footer {
+                                                height: 48px;
+                                                }
+                                                .content {
+                                                    height: -42%;
+                                                    }                       
+}                
+
+
